@@ -1,10 +1,10 @@
 // Fibonacci Sequence
 
-generateFibanacci = (lenght) => {
+generateFibanacci = (length) => {
   let n1 = 0;
   let n2 = 1;
   let series = [];
-  while (series.length <= lenght - 1) {
+  while (series.length <= length - 1) {
     series.push(n1);
     let temp = n1;
     n1 = n2;
