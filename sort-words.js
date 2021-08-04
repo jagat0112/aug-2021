@@ -5,5 +5,3 @@ const sortWords = (words) => {
   const sorted = wordsArr.sort().join(" ");
   return sorted;
 };
-
-console.log(sortWords("hello sir k cha"));
