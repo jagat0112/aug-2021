@@ -28,12 +28,14 @@ input:focus {
   color: black;
 }
 
-.add-input {
+form {
   width: 100%;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .add-input input {
@@ -68,6 +70,7 @@ li button {
 
 .todo-completed {
   text-decoration: line-through;
+  color: gray;
 }
 
 .todo-finish {
@@ -77,4 +80,13 @@ li button {
 .clear-all {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.todo-input {
+  border: none;
+  width: 40%;
+}
+
+.todo-input:focus {
+  outline: none;
 }

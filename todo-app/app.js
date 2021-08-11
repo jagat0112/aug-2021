@@ -13,6 +13,7 @@ todoInput.addEventListener("input", (e) => {
 
 addTodo.addEventListener("click", (e) => {
   e.preventDefault();
+  console.log(date.value);
   addTodos(todo);
 });
 

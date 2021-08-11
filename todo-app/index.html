@@ -23,14 +23,29 @@
   <body class="container">
     <h1>Vanilla JavaScript Todo App</h1>
     <form>
-      <div class="add-input">
+      <input
+        class="todo-input"
+        type="text"
+        autofocus
+        placeholder="New Todos..."
+        id="todo-input"
+      />
+
+      <div>
+        <label for="date">Due on </label>
         <input
-          type="text"
-          autofocus
-          placeholder="New Todos..."
-          id="todo-input"
+          type="date"
+          id="date"
+          name="date"
+          min="2021-08-11"
+          max="2025-12-31"
+          required
         />
-        <button class="addTodo"><i class="fas fa-plus"></i></button>
+        <input type="time" id="time" name="name" value="09:00" />
+
+        <button type="submit" class="addTodo">
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
     </form>
     <ul></ul>
