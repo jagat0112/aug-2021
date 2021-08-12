@@ -37,9 +37,8 @@ export const addTodos = (item) => {
   if (item === "") {
     return alert("Empty Input");
   }
-
+  console.log(dueDate.getFullYear());
   const todo = { name: item, dueDate };
   createTodo(todo);
   renderItems(store);
-  console.log(store);
 };
