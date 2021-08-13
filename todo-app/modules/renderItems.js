@@ -1,7 +1,8 @@
 const ul = document.querySelector("ul");
 const todoInput = document.getElementById("todo-input");
 
-const renderItems = (store) => {
+const renderItems = () => {
+  const store = JSON.parse(localStorage.getItem("todos")) || [];
   ul.innerHTML = "";
   store.map((todo) => {
     const lessThanAday =
