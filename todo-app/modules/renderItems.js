@@ -14,7 +14,7 @@ const renderItems = (store) => {
         ? Date.parse(todo.dueDate) - Date.now()
         : null;
 
-    const timeAndDate = todo.dueDate.toString().slice(3, 21);
+    const timeAndDate = moment(todo.dueDate).format("lll");
     const list = document.createElement("li");
     const span = document.createElement("span");
     const date = document.createElement("p");

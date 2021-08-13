@@ -5,6 +5,8 @@ const ul = document.querySelector("ul");
 const clearAll = document.querySelector(".clear-all");
 
 let todo = "";
+const m = moment("2021-08-13 10:37", "YYYY-MM-DD hh:mm");
+console.log(m.fromNow());
 
 // Assigning value to todo
 todoInput.addEventListener("input", (e) => {

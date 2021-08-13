@@ -1,14 +1,11 @@
 import renderItems from "./renderItems.js";
 import CreateTodo from "./createTodo.js";
+import storeTodos from "./store.js";
 
 const date = document.querySelector("#date");
 const time = document.querySelector("#time");
-let store = [];
 
-export const createTodo = ({ name, dueDate }) => {
-  const newTodo = new CreateTodo(name, dueDate);
-  store.push(newTodo);
-};
+let store = [];
 
 export const deleteTodo = (e) => {
   let itemId = e.target.parentElement.parentElement.id;
@@ -32,12 +29,11 @@ export const markComplete = (e) => {
 };
 
 export const addTodos = (item) => {
-  const dueDate = new Date(`${date.value} ${time.value}`);
+  const dueDate = `${date.value}T${time.value}+05:45`;
   if (item === "") {
     return alert("Empty Input");
   }
-  console.log(dueDate.getFullYear());
-  const todo = { name: item, dueDate };
-  createTodo(todo);
+  const newTodo = new CreateTodo(item, dueDate);
+  store = storeTodos(newTodo);
   renderItems(store);
 };
