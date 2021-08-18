@@ -18,10 +18,10 @@ renderDom();
 const fetchInput = document.querySelector(".fetch-input");
 const fetchBtn = document.querySelector(".fetch-btn");
 
-fetchBtn.addEventListener("click", async (e) => {
+fetchBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  const data = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     body: JSON.stringify({
       userId: 1,
@@ -31,13 +31,11 @@ fetchBtn.addEventListener("click", async (e) => {
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
     },
-  });
-  // .then((response) => response.json())
-  // .then((json) => {
-  //   users.push(json);
-  //   renderDom();
-  // })
-  // .catch((err) => console.log(err));
-  const res = data.json();
-  console.log(data);
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      users.push(json);
+      renderDom();
+    })
+    .catch((err) => console.log(err));
 });
