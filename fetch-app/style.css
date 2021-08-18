@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+li p {
+  padding: 0 50px;
+}
+
+ul {
+  text-align: left;
+}
+
+li:first-of-type {
+  background-color: rgba(139, 85, 85, 0.452);
+}
+
+a {
+  text-decoration: none;
+}
