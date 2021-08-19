@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form submit-type="new-user">
+        <h2>Insert Form</h2>
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+        />
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Last Name"
+        />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <button type="submit">Submit</button>
+      </form>
+      <div>
+        <h2>results</h2>
+        <table>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+        </table>
+        <ul class="pagination"></ul>
+      </div>
+    </div>
+    <script type="module" src="/app.js"></script>
+    <script type="module" src="/modules/addUser.js"></script>
+    <script type="module" src="/modules/editUser.js"></script>
+  </body>
+</html>
