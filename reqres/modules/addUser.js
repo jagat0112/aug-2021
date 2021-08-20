@@ -8,6 +8,8 @@ const email = document.querySelector("#email");
 form.addEventListener("submit", (e) => {
   if (form.getAttribute("submit-type") === "new-user") {
     e.preventDefault();
+    if (firstName.value === "" || lastName.value === "" || email.value === "")
+      alert("Please input all fields");
     const newUser = {
       firstName: firstName.value,
       lastName: lastName.value,
