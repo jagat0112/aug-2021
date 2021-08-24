@@ -9,10 +9,11 @@ const addTodo = document.querySelector(".addTodo");
 const ul = document.querySelector("ul");
 const clearAll = document.querySelector(".clear-all");
 
+// Setting value and min date and time for Todo
 date.setAttribute("min", moment().format("YYYY-MM-DD"));
 date.setAttribute("value", moment().format("YYYY-MM-DD"));
 
-time.setAttribute("value", moment().format("hh:mm"));
+time.setAttribute("value", moment().format("HH:mm"));
 
 let todo = "";
 

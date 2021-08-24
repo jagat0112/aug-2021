@@ -12,10 +12,6 @@ ul {
   text-align: left;
 }
 
-li:first-of-type {
-  background-color: rgba(139, 85, 85, 0.452);
-}
-
 a {
   text-decoration: none;
 }

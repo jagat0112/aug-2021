@@ -19,14 +19,21 @@ function Person(name, age) {
 const jagat = new Person("Jagat Pradhan", 25);
 const john = new Person("John Doe", 52);
 
-console.log(jagat, john);
+// console.log(jagat, john);
 
 //  Method 3 creating by instance of an object
 
-const address = new Object({
+const address = {
   city: "kathmandu",
   state: "BG",
   country: "Nepal",
-});
+  get showAddress() {
+    console.log(this.city, this.state, this.country);
+  },
+  set setCity(newCity) {
+    this.city = newCity;
+  },
+};
 
-console.log(address);
+address.setCity = "Pokhara";
+// console.log(address.showAddress);

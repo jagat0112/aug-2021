@@ -13,4 +13,14 @@ const generatePrimeNumber = (high, low = 2) => {
   }
 };
 
-generatePrimeNumber(2, 100);
+// generatePrimeNumber(2, 100);
+
+const arr = [1, 2, 3, 4, 5];
+
+const obj = {
+  key: "values",
+};
+
+for (let key of obj) {
+  console.log(key);
+}
